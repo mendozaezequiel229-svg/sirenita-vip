@@ -1,6 +1,36 @@
-const fallback=[{"id": "corona", "name": "Corona 330 ml x6", "price": 39000, "category": "Cervezas", "image": "assets/products/corona.jpg", "active": true}, {"id": "miller", "name": "Miller 330 ml x6", "price": 37000, "category": "Cervezas", "image": "assets/products/miller.jpg", "active": true}, {"id": "chandon", "name": "Chandon + 2 Speed", "price": 58000, "category": "Espumantes", "image": "assets/products/chandon.jpg", "active": true}, {"id": "federico", "name": "Federico + 2 Speed", "price": 43000, "category": "Espumantes", "image": "assets/products/federico.jpg", "active": true}, {"id": "baron-b", "name": "Barón B + 2 Speed", "price": 79000, "category": "Espumantes", "image": "assets/products/baron-b.jpg", "active": true}, {"id": "baron-b-botellon", "name": "Barón B Botellón + 3 Speed", "price": 179000, "category": "Espumantes", "image": "assets/products/baron-b-botellon.jpg", "active": true}, {"id": "jw-red", "name": "Johnnie Walker Red + 3 Speed", "price": 99000, "category": "Whiskies", "image": "assets/products/jw-red.jpg", "active": true}, {"id": "jw-black", "name": "Johnnie Walker Black + 3 Speed", "price": 139000, "category": "Whiskies", "image": "assets/products/jw-black.jpg", "active": true}, {"id": "jw-gold", "name": "Johnnie Walker Gold + 3 Speed", "price": 280000, "category": "Whiskies", "image": "assets/products/jw-gold.jpg", "active": true}, {"id": "jack", "name": "Jack Daniel’s + 3 Speed", "price": 149000, "category": "Whiskies", "image": "assets/products/jack.jpg", "active": true}, {"id": "jack-apple", "name": "Jack Daniel’s Manzana + 3 Speed", "price": 149000, "category": "Whiskies", "image": "assets/products/jack-apple.jpg", "active": true}, {"id": "chandon-botellon", "name": "Chandon Botellón + 3 Speed", "price": 182000, "category": "Espumantes", "image": "assets/products/chandon-botellon.jpg", "active": true}, {"id": "jack-honey", "name": "Jack Daniel’s Honey + 3 Speed", "price": 149000, "category": "Whiskies", "image": "assets/products/jack-honey.jpg", "active": true}, {"id": "baileys", "name": "Baileys 750 ml", "price": 59000, "category": "Licores", "image": "assets/products/baileys.jpg", "active": true}, {"id": "nuvo", "name": "Nuvo + 2 Speed", "price": 199000, "category": "Licores", "image": "assets/products/nuvo.jpg", "active": true}, {"id": "smirnoff", "name": "Smirnoff + Speed o jugo", "price": 50000, "category": "Vodkas", "image": "assets/products/smirnoff.jpg", "active": true}, {"id": "skyy", "name": "Skyy + Speed o jugo", "price": 58000, "category": "Vodkas", "image": "assets/products/skyy.jpg", "active": true}, {"id": "tragos", "name": "Tragos variados", "price": 10000, "category": "Tragos", "image": "assets/products/tragos.jpg", "active": true}, {"id": "coca", "name": "Coca-Cola", "price": 6000, "category": "Sin alcohol", "image": "assets/products/coca.jpg", "active": true}, {"id": "sprite", "name": "Sprite", "price": 6000, "category": "Sin alcohol", "image": "assets/products/sprite.jpg", "active": true}, {"id": "agua", "name": "Agua", "price": 5000, "category": "Sin alcohol", "image": "assets/products/agua.jpg", "active": true}, {"id": "jugo", "name": "Jugo", "price": 12000, "category": "Sin alcohol", "image": "assets/products/jugo.jpg", "active": true}];
-const saved=JSON.parse(localStorage.getItem('sirenita_products')||'null');let data=saved||fallback;let category='Todos', query='';
-const money=n=>new Intl.NumberFormat('es-AR',{style:'currency',currency:'ARS',maximumFractionDigits:0}).format(n);
-function renderFilters(){const cats=['Todos',...new Set(data.filter(x=>x.active).map(x=>x.category))];filters.innerHTML=cats.map(c=>`<button class="${c===category?'active':''}" data-c="${c}">${c}</button>`).join('');filters.querySelectorAll('button').forEach(b=>b.onclick=()=>{category=b.dataset.c;render()})}
-function render(){renderFilters();const list=data.filter(x=>x.active&&(category==='Todos'||x.category===category)&&x.name.toLowerCase().includes(query.toLowerCase()));products.innerHTML=list.map(x=>`<article class="card"><div class="image-wrap"><img loading="lazy" src="${x.image}" alt="${x.name}"></div><div class="card-body"><div class="category">${x.category}</div><h3>${x.name}</h3><div class="price">${money(x.price)}</div></div></article>`).join('')||'<p>No se encontraron productos.</p>'}
-searchBtn.onclick=()=>{search.classList.add('open');search.setAttribute('aria-hidden','false');q.focus()};closeSearch.onclick=()=>{search.classList.remove('open');search.setAttribute('aria-hidden','true')};search.onclick=e=>{if(e.target===search)closeSearch.click()};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSearch.click()});q.oninput=e=>{query=e.target.value;render()};render();if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
+let data = [];
+let category = 'Todos';
+let query = '';
+
+const money = value => new Intl.NumberFormat('es-AR', {style: 'currency', currency: 'ARS', maximumFractionDigits: 0}).format(value);
+
+async function loadProducts() {
+  const response = await fetch('./products.json?v=3');
+  const defaults = await response.json();
+  const saved = JSON.parse(localStorage.getItem('sirenita_products') || 'null');
+  const savedById = new Map((saved || []).map(product => [product.id, product]));
+  data = defaults.map(product => ({...product, ...(savedById.get(product.id) || {}), image: product.image}));
+}
+
+function renderFilters() {
+  const categories = ['Todos', ...new Set(data.filter(product => product.active).map(product => product.category))];
+  filters.innerHTML = categories.map(name => `<button class="${name === category ? 'active' : ''}" data-c="${name}">${name}</button>`).join('');
+  filters.querySelectorAll('button').forEach(button => {
+    button.onclick = () => { category = button.dataset.c; render(); };
+  });
+}
+
+function render() {
+  renderFilters();
+  const visible = data.filter(product => product.active && (category === 'Todos' || product.category === category) && product.name.toLowerCase().includes(query.toLowerCase()));
+  products.innerHTML = visible.map(product => `<article class="card"><div class="image-wrap"><img loading="lazy" src="${product.image}" alt="${product.name}"></div><div class="card-body"><div class="category">${product.category}</div><h3>${product.name}</h3><div class="price">${money(product.price)}</div></div></article>`).join('') || '<p>No se encontraron productos.</p>';
+}
+
+searchBtn.onclick = () => { search.classList.add('open'); search.setAttribute('aria-hidden', 'false'); q.focus(); };
+closeSearch.onclick = () => { search.classList.remove('open'); search.setAttribute('aria-hidden', 'true'); };
+search.onclick = event => { if (event.target === search) closeSearch.click(); };
+document.addEventListener('keydown', event => { if (event.key === 'Escape') closeSearch.click(); });
+q.oninput = event => { query = event.target.value; render(); };
+
+loadProducts().then(render).catch(() => { products.innerHTML = '<p>No se pudo cargar la carta. Actualizá la página.</p>'; });
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./sw.js').catch(() => {});
