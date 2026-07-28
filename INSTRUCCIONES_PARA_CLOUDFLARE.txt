@@ -1,0 +1,12 @@
+SIRENITA VIP — PUBLICACIÓN EN CLOUDFLARE
+
+1. En Cloudflare, elegí “Upload your static files”.
+2. Arrastrá la carpeta completa “Sirenita_VIP_PUBLICAR_AHORA” al recuadro.
+3. Confirmá que aparezcan index.html, styles.css, app.js y la carpeta assets.
+4. Presioná “Deploy”.
+5. Al terminar, abrí el enlace terminado en .pages.dev y envialo por el chat.
+
+IMPORTANTE:
+- No subas una carpeta que contenga otra carpeta con el proyecto adentro.
+- index.html debe quedar en la raíz de la subida.
+- El panel admin incluido es provisional y guarda cambios solamente en el dispositivo donde se usa.

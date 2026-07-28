@@ -1,0 +1,24 @@
+SIRENITA VIP — MENÚ DIGITAL
+
+Estado de esta entrega:
+- Carta de bebidas completa: 22 productos.
+- Precios expresados en pesos argentinos.
+- Fotografías incluidas para todos los productos.
+- Pantalla de entrada con logo grande.
+- Diseño adaptable a celular y computadora.
+- Buscador y filtros por categoría.
+- Pedidos desactivados.
+- Aviso de 10% de recargo por transferencia.
+- Panel provisional: admin.html (PIN 2026).
+
+IMPORTANTE:
+El panel provisional guarda cambios solamente en el navegador utilizado.
+Para administración sincronizada desde cualquier dispositivo se necesita
+publicación con una base de datos y autenticación segura.
+
+Para ver localmente:
+1. Abrir index.html.
+2. Para el panel, abrir admin.html.
+
+Para uso con QR:
+Subir toda esta carpeta a un hosting web y generar un QR con la URL pública.

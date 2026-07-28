@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="Carta digital de bebidas de Sirenita VIP.">
+  <title>Sirenita VIP — Carta de bebidas</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="hero" id="inicio" aria-label="Bienvenida a Sirenita VIP">
+    <div class="hero-glow"></div>
+    <img class="hero-logo" src="assets/logo-hero.jpg" alt="Logo de Sirenita VIP">
+    <div class="hero-copy">
+      <span>BAR · LOUNGE · EXPERIENCIA VIP</span>
+      <h1>Sirenita VIP</h1>
+      <p>Donde cada momento se convierte en una experiencia inolvidable.</p>
+      <a class="cta" href="#carta">VER CARTA</a>
+    </div>
+    <a class="scroll-cue" href="#carta" aria-label="Ir a la carta">⌄</a>
+  </section>
+
+  <header class="sticky">
+    <a class="brand" href="#inicio"><b>Sirenita</b> <em>VIP</em></a>
+    <button id="searchBtn" aria-label="Buscar bebida">Buscar</button>
+  </header>
+
+  <main id="carta">
+    <div class="intro">
+      <span>NUESTRA SELECCIÓN</span>
+      <h2>Bebidas</h2>
+      <p>Todos los productos disponibles actualmente en Sirenita VIP.</p>
+    </div>
+    <div id="filters" class="filters" aria-label="Categorías"></div>
+    <div id="products" class="grid" aria-live="polite"></div>
+    <aside class="notice">
+      <strong>Información de pago</strong>
+      <span>Los pagos por transferencia tienen un recargo del 10%.</span>
+    </aside>
+  </main>
+
+  <footer>© 2026 Sirenita VIP · Experiencia que se siente</footer>
+
+  <div class="search" id="search" aria-hidden="true">
+    <div class="search-box">
+      <label for="q">Buscar bebida</label>
+      <input id="q" autocomplete="off" placeholder="Ej.: Jack Daniel’s, Corona…">
+      <button id="closeSearch">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
