@@ -2,7 +2,7 @@ let data = [];
 let defaults = [];
 
 async function loadProducts() {
-  const response = await fetch('./products.json?v=3');
+  const response = await fetch('./products.json?v=7');
   defaults = await response.json();
   const saved = JSON.parse(localStorage.getItem('sirenita_products') || 'null');
   const savedById = new Map((saved || []).map(product => [product.id, product]));

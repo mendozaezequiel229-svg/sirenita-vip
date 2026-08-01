@@ -2,8 +2,8 @@
   position: relative;
   isolation: isolate;
   background-image:
-    linear-gradient(180deg, rgba(255, 210, 103, 0.04) 0%, rgba(0, 0, 0, 0.12) 58%, rgba(4, 3, 2, 0.96) 100%),
-    url("assets/marble-gold.png");
+    linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.08) 68%, rgba(2, 2, 2, 0.94) 100%),
+    url("assets/marble-gold-v2.png");
   background-size: cover;
   background-position: center;
   border-color: rgba(255, 205, 91, 0.62);
@@ -27,30 +27,30 @@
   content: "";
   position: absolute;
   z-index: -1;
-  width: 128%;
-  height: 132%;
-  left: -14%;
-  top: -10%;
+  width: 78%;
+  height: 90%;
+  left: 11%;
+  top: 3%;
   border-radius: 50%;
   background: radial-gradient(
     ellipse at center,
-    rgba(255, 237, 178, 0.92) 0%,
-    rgba(255, 198, 73, 0.74) 20%,
-    rgba(214, 139, 24, 0.48) 42%,
-    rgba(117, 67, 7, 0.20) 62%,
-    transparent 79%
+    rgba(255, 231, 166, 0.60) 0%,
+    rgba(242, 178, 63, 0.42) 22%,
+    rgba(190, 112, 14, 0.22) 43%,
+    rgba(92, 50, 5, 0.08) 59%,
+    transparent 72%
   );
-  filter: blur(14px);
+  filter: blur(17px);
 }
 
 .image-wrap::after {
   content: "";
   position: absolute;
-  inset: auto 4% -1% 4%;
-  height: 22%;
+  inset: auto 15% 0 15%;
+  height: 15%;
   border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(255, 222, 126, 0.66) 0%, rgba(222, 151, 35, 0.38) 30%, transparent 72%);
-  filter: blur(11px);
+  background: radial-gradient(ellipse, rgba(255, 218, 124, 0.38) 0%, rgba(207, 133, 28, 0.20) 34%, transparent 72%);
+  filter: blur(10px);
 }
 
 .image-wrap img {

@@ -4,7 +4,7 @@
     "name": "Corona 330 ml x6",
     "price": 39000,
     "category": "Cervezas",
-    "image": "assets/products/corona.webp",
+    "image": "assets/products-premium/corona.webp",
     "active": true
   },
   {
@@ -12,7 +12,7 @@
     "name": "Miller 330 ml x6",
     "price": 37000,
     "category": "Cervezas",
-    "image": "assets/products/miller.webp",
+    "image": "assets/products-premium/miller.webp",
     "active": true
   },
   {
@@ -20,7 +20,7 @@
     "name": "Chandon + 2 Speed",
     "price": 58000,
     "category": "Espumantes",
-    "image": "assets/products/chandon.webp",
+    "image": "assets/products-premium/chandon.webp",
     "active": true
   },
   {
@@ -28,7 +28,7 @@
     "name": "Federico + 2 Speed",
     "price": 43000,
     "category": "Espumantes",
-    "image": "assets/products/federico.webp",
+    "image": "assets/products-premium/federico.webp",
     "active": true
   },
   {
@@ -36,7 +36,7 @@
     "name": "Barón B + 2 Speed",
     "price": 79000,
     "category": "Espumantes",
-    "image": "assets/products/baron-b.webp",
+    "image": "assets/products-premium/baron-b.webp",
     "active": true
   },
   {
@@ -44,7 +44,7 @@
     "name": "Barón B Botellón + 3 Speed",
     "price": 179000,
     "category": "Espumantes",
-    "image": "assets/products/baron-b-botellon.webp",
+    "image": "assets/products-premium/baron-b-botellon.webp",
     "active": true
   },
   {
@@ -52,7 +52,7 @@
     "name": "Johnnie Walker Red + 3 Speed",
     "price": 99000,
     "category": "Whiskies",
-    "image": "assets/products/jw-red.webp",
+    "image": "assets/products-premium/jw-red.webp",
     "active": true
   },
   {
@@ -60,7 +60,7 @@
     "name": "Johnnie Walker Black + 3 Speed",
     "price": 139000,
     "category": "Whiskies",
-    "image": "assets/products/jw-black.webp",
+    "image": "assets/products-premium/jw-black.webp",
     "active": true
   },
   {
@@ -68,7 +68,7 @@
     "name": "Johnnie Walker Gold + 3 Speed",
     "price": 280000,
     "category": "Whiskies",
-    "image": "assets/products/jw-gold.webp",
+    "image": "assets/products-premium/jw-gold.webp",
     "active": true
   },
   {
@@ -76,7 +76,7 @@
     "name": "Jack Daniel’s + 3 Speed",
     "price": 149000,
     "category": "Whiskies",
-    "image": "assets/products/jack.webp",
+    "image": "assets/products-premium/jack.webp",
     "active": true
   },
   {
@@ -84,7 +84,7 @@
     "name": "Jack Daniel’s Manzana + 3 Speed",
     "price": 149000,
     "category": "Whiskies",
-    "image": "assets/products/jack-apple.webp",
+    "image": "assets/products-premium/jack-apple.webp",
     "active": true
   },
   {
@@ -92,7 +92,7 @@
     "name": "Chandon Botellón + 3 Speed",
     "price": 182000,
     "category": "Espumantes",
-    "image": "assets/products/chandon-botellon.webp",
+    "image": "assets/products-premium/chandon-botellon.webp",
     "active": true
   },
   {
@@ -100,7 +100,7 @@
     "name": "Jack Daniel’s Honey + 3 Speed",
     "price": 149000,
     "category": "Whiskies",
-    "image": "assets/products/jack-honey.webp",
+    "image": "assets/products-premium/jack-honey.webp",
     "active": true
   },
   {
@@ -108,7 +108,7 @@
     "name": "Baileys 750 ml",
     "price": 59000,
     "category": "Licores",
-    "image": "assets/products/baileys.webp",
+    "image": "assets/products-premium/baileys.webp",
     "active": true
   },
   {
@@ -116,7 +116,7 @@
     "name": "Nuvo + 2 Speed",
     "price": 199000,
     "category": "Licores",
-    "image": "assets/products/nuvo.webp",
+    "image": "assets/products-premium/nuvo.webp",
     "active": true
   },
   {
@@ -124,7 +124,7 @@
     "name": "Smirnoff + Speed o jugo",
     "price": 50000,
     "category": "Vodkas",
-    "image": "assets/products/smirnoff.webp",
+    "image": "assets/products-premium/smirnoff.webp",
     "active": true
   },
   {
@@ -132,7 +132,7 @@
     "name": "Skyy + Speed o jugo",
     "price": 58000,
     "category": "Vodkas",
-    "image": "assets/products/skyy.webp",
+    "image": "assets/products-premium/skyy.webp",
     "active": true
   },
   {
@@ -140,7 +140,7 @@
     "name": "Absolut + 2 Speed",
     "price": 50000,
     "category": "Vodkas",
-    "image": "assets/products/absolut.webp",
+    "image": "assets/products-premium/absolut.webp",
     "active": true
   },
   {
@@ -148,7 +148,7 @@
     "name": "Grey Goose + 2 Speed",
     "price": 50000,
     "category": "Vodkas",
-    "image": "assets/products/grey-goose.webp",
+    "image": "assets/products-premium/grey-goose.webp",
     "active": true
   },
   {
@@ -156,7 +156,7 @@
     "name": "Tragos variados",
     "price": 10000,
     "category": "Tragos",
-    "image": "assets/products/tragos.webp",
+    "image": "assets/products-premium/tragos.webp",
     "active": true
   },
   {
@@ -164,7 +164,7 @@
     "name": "Coca-Cola",
     "price": 6000,
     "category": "Sin alcohol",
-    "image": "assets/products/coca.webp",
+    "image": "assets/products-premium/coca.webp",
     "active": true
   },
   {
@@ -172,7 +172,7 @@
     "name": "Sprite",
     "price": 6000,
     "category": "Sin alcohol",
-    "image": "assets/products/sprite.webp",
+    "image": "assets/products-premium/sprite.webp",
     "active": true
   },
   {
@@ -180,7 +180,7 @@
     "name": "Agua",
     "price": 5000,
     "category": "Sin alcohol",
-    "image": "assets/products/agua.webp",
+    "image": "assets/products-premium/agua.webp",
     "active": true
   },
   {
@@ -188,7 +188,7 @@
     "name": "Jugo",
     "price": 12000,
     "category": "Sin alcohol",
-    "image": "assets/products/jugo.webp",
+    "image": "assets/products-premium/jugo.webp",
     "active": true
   }
 ]

@@ -5,7 +5,7 @@ let query = '';
 const money = value => new Intl.NumberFormat('es-AR', {style: 'currency', currency: 'ARS', maximumFractionDigits: 0}).format(value);
 
 async function loadProducts() {
-  const response = await fetch('./products.json?v=3');
+  const response = await fetch('./products.json?v=7');
   const defaults = await response.json();
   const saved = JSON.parse(localStorage.getItem('sirenita_products') || 'null');
   const savedById = new Map((saved || []).map(product => [product.id, product]));
