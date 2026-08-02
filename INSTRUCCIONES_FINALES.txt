@@ -1,0 +1,17 @@
+SIRENITA VIP — CORRECCIÓN CLOUDFLARE
+
+CAUSA DEL ERROR CORREGIDA
+Cloudflare rechazaba el despliegue porque el repositorio contenía al menos un archivo ZIP mayor a 25 MiB (por ejemplo BOTELLAS_EDITADAS.zip). Los Workers Static Assets admiten un máximo de 25 MiB por archivo.
+
+CORRECCIÓN INCLUIDA
+- wrangler.toml configura explícitamente la raíz como directorio de archivos estáticos.
+- .assetsignore impide que Cloudflare publique ZIP, RAR, PSD, copias de seguridad y otros archivos que no pertenecen al sitio.
+- .gitignore evita volver a agregar esos archivos por accidente.
+- Ningún archivo necesario de este paquete supera 25 MiB.
+
+ACTUALIZACIÓN EN GITHUB
+1. Descomprimir este ZIP.
+2. Subir TODO el contenido interno a la raíz del repositorio sirenita-vip.
+3. Confirmar los cambios en la rama principal.
+4. No hace falta borrar BOTELLAS_EDITADAS.zip para que Cloudflare compile, porque .assetsignore lo excluye. Aun así, se recomienda eliminarlo luego para mantener limpio el repositorio.
+5. Cloudflare debería iniciar automáticamente una nueva compilación. Si no lo hace, usar Retry build sobre el último commit.
