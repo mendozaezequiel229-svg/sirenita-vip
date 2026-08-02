@@ -24,11 +24,11 @@
     "active": true
   },
   {
-    "id": "federico",
-    "name": "Federico + 2 Speed",
-    "price": 43000,
+    "id": "chandon-delice",
+    "name": "Chandon Délice + 2 Speed",
+    "price": 58000,
     "category": "Espumantes",
-    "image": "assets/products/federico.webp",
+    "image": "assets/products/chandon-delice.webp",
     "active": true
   },
   {
@@ -40,67 +40,67 @@
     "active": true
   },
   {
-    "id": "baron-b-botellon",
-    "name": "Barón B Botellón + 3 Speed",
+    "id": "baron-b-magnum",
+    "name": "Barón B Magnum + 3 Speed",
     "price": 179000,
     "category": "Espumantes",
-    "image": "assets/products/baron-b-botellon.webp",
+    "image": "assets/products/baron-b-magnum.webp",
     "active": true
   },
   {
-    "id": "jw-red",
-    "name": "Johnnie Walker Red + 3 Speed",
+    "id": "chandon-magnum",
+    "name": "Chandon Magnum + 3 Speed",
+    "price": 182000,
+    "category": "Espumantes",
+    "image": "assets/products/chandon-magnum.webp",
+    "active": true
+  },
+  {
+    "id": "red-label",
+    "name": "Johnnie Walker Red Label + 3 Speed",
     "price": 99000,
     "category": "Whiskies",
-    "image": "assets/products/jw-red.webp",
+    "image": "assets/products/red-label.webp",
     "active": true
   },
   {
-    "id": "jw-black",
-    "name": "Johnnie Walker Black + 3 Speed",
+    "id": "black-label",
+    "name": "Johnnie Walker Black Label + 3 Speed",
     "price": 139000,
     "category": "Whiskies",
-    "image": "assets/products/jw-black.webp",
+    "image": "assets/products/black-label.webp",
     "active": true
   },
   {
-    "id": "jw-gold",
-    "name": "Johnnie Walker Gold + 3 Speed",
+    "id": "gold-label-reserve",
+    "name": "Johnnie Walker Gold Label Reserve + 3 Speed",
     "price": 280000,
     "category": "Whiskies",
-    "image": "assets/products/jw-gold.webp",
+    "image": "assets/products/gold-label-reserve.webp",
     "active": true
   },
   {
-    "id": "jack",
+    "id": "jack-daniels",
     "name": "Jack Daniel’s + 3 Speed",
     "price": 149000,
     "category": "Whiskies",
-    "image": "assets/products/jack.webp",
+    "image": "assets/products/jack-daniels.webp",
     "active": true
   },
   {
-    "id": "jack-apple",
+    "id": "jack-daniels-manzana",
     "name": "Jack Daniel’s Manzana + 3 Speed",
     "price": 149000,
     "category": "Whiskies",
-    "image": "assets/products/jack-apple.webp",
+    "image": "assets/products/jack-daniels-manzana.webp",
     "active": true
   },
   {
-    "id": "chandon-botellon",
-    "name": "Chandon Botellón + 3 Speed",
-    "price": 182000,
-    "category": "Espumantes",
-    "image": "assets/products/chandon-botellon.webp",
-    "active": true
-  },
-  {
-    "id": "jack-honey",
+    "id": "jack-daniels-honey",
     "name": "Jack Daniel’s Honey + 3 Speed",
     "price": 149000,
     "category": "Whiskies",
-    "image": "assets/products/jack-honey.webp",
+    "image": "assets/products/jack-daniels-honey.webp",
     "active": true
   },
   {
@@ -160,11 +160,27 @@
     "active": true
   },
   {
-    "id": "coca",
-    "name": "Coca-Cola",
+    "id": "speed",
+    "name": "Speed 250 ml",
+    "price": 6000,
+    "category": "Energizantes",
+    "image": "assets/products/speed.webp",
+    "active": true
+  },
+  {
+    "id": "speed-xl",
+    "name": "Speed XL 473 ml",
+    "price": 9000,
+    "category": "Energizantes",
+    "image": "assets/products/speed-xl.webp",
+    "active": true
+  },
+  {
+    "id": "coca-cola-600ml",
+    "name": "Coca-Cola 600 ml",
     "price": 6000,
     "category": "Sin alcohol",
-    "image": "assets/products/coca.webp",
+    "image": "assets/products/coca-cola-600ml.webp",
     "active": true
   },
   {

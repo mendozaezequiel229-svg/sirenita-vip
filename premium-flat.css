@@ -1,20 +1,24 @@
-SIRENITA VIP — MENÚ DIGITAL URGENTE
+.card {
+  background: #050403;
+}
 
-ARCHIVOS PRINCIPALES
-- index.html: carta para clientes.
-- admin.html: panel local de edición.
-- PIN inicial del panel: 2026.
+.image-wrap {
+  aspect-ratio: 4 / 5;
+  padding: 0;
+  background: #050403;
+}
 
-IMPORTANTE
-Esta carpeta está lista para subirse a un hosting estático.
-El botón de pedidos está desactivado.
-La carta incluye únicamente bebidas.
-Los pagos por transferencia muestran el recargo del 10% indicado en la carta física.
+.image-wrap::before,
+.image-wrap::after,
+.card::after {
+  display: none;
+}
 
-PANEL
-El panel actual guarda cambios en el navegador del dispositivo administrador.
-Para sincronizar cambios en todos los celulares hace falta conectar una base de datos y publicar el sistema.
-
-PUBLICACIÓN
-Subir todos los archivos manteniendo la misma estructura de carpetas.
-Abrir index.html desde la URL pública y generar el QR con esa dirección.
+.image-wrap img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: cover;
+  border-radius: 0;
+  filter: none;
+}
