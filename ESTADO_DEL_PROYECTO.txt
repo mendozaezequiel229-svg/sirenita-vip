@@ -1,1 +1,24 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Administración — Sirenita VIP</title><link rel="stylesheet" href="admin.css"></head><body><main><div id="login"><h1>Panel Sirenita VIP</h1><p>Acceso provisional de emergencia.</p><input id="pin" type="password" inputmode="numeric" placeholder="PIN"><button id="enter">Ingresar</button><small>PIN inicial: 2026</small></div><div id="panel" hidden><header><h1>Productos</h1><div><button id="add">Agregar</button><button id="reset">Restaurar carta</button><a href="index.html">Ver menú</a></div></header><p class="notice">Los cambios de este panel se guardan en este navegador. Para sincronizarlos en todos los dispositivos hace falta conectar una base de datos.</p><div id="list"></div></div></main><script src="admin.js?v=7"></script></body></html>
+SIRENITA VIP — MENÚ DIGITAL
+
+Estado de esta entrega:
+- Carta de bebidas completa: 22 productos.
+- Precios expresados en pesos argentinos.
+- Fotografías incluidas para todos los productos.
+- Pantalla de entrada con logo grande.
+- Diseño adaptable a celular y computadora.
+- Buscador y filtros por categoría.
+- Pedidos desactivados.
+- Aviso de 10% de recargo por transferencia.
+- Panel provisional: admin.html (PIN 2026).
+
+IMPORTANTE:
+El panel provisional guarda cambios solamente en el navegador utilizado.
+Para administración sincronizada desde cualquier dispositivo se necesita
+publicación con una base de datos y autenticación segura.
+
+Para ver localmente:
+1. Abrir index.html.
+2. Para el panel, abrir admin.html.
+
+Para uso con QR:
+Subir toda esta carpeta a un hosting web y generar un QR con la URL pública.
