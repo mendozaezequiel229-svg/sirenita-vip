@@ -1,1 +1,24 @@
-const CACHE='sirenita-v7';const ASSETS=['./','./index.html','./styles.css','./premium.css?v=6','./premium-flat.css?v=7','./app.js?v=7','./products.json?v=7','./assets/logo-hero.jpg'];self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)))});self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));
+.card {
+  background: #050403;
+}
+
+.image-wrap {
+  aspect-ratio: 4 / 5;
+  padding: 0;
+  background: #050403;
+}
+
+.image-wrap::before,
+.image-wrap::after,
+.card::after {
+  display: none;
+}
+
+.image-wrap img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: cover;
+  border-radius: 0;
+  filter: none;
+}
